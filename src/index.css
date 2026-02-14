@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-family-serif: Georgia, Cambria, 'Times New Roman', serif;
+  --font-family-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --color-primary: #c9a770;
+  --color-secondary: #8b7355;
+  --color-cream: #faf8f5;
+  --color-card: #ffffff;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: var(--font-family-serif);
+    color: theme('colors.gray.800');
+    background-color: white;
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+@layer components {
+  /* 1열 카드 컨테이너 - 카드들이 연결된 것처럼 */
+  .section-container {
+    max-width: 26rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  @media (min-width: 640px) {
+    .section-container {
+      max-width: 28rem;
+      width:28rem;
+    }
+  }
+
+  .card-wrapper {
+    background: white;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  /* 꽃 심볼 구분선 (toourguest 스타일) */
+  .flower-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .flower-divider svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: var(--color-primary);
+    opacity: 0.8;
+  }
+  
+  .section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: theme('colors.gray.700');
+    letter-spacing: -0.02em;
+  }
+  
+  @media (min-width: 640px) {
+    .section-title {
+      font-size: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  /* 공유 버튼 스타일 (toourguest) */
+  .share-btn {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: all 0.2s ease;
+  }
+
+  .share-btn-kakao {
+    background: #fee500;
+    color: #191919;
+  }
+
+  .share-btn-kakao:hover {
+    background: #f5dc00;
+  }
+
+  .share-btn-copy {
+    background: white;
+    color: #555;
+    border: 1.5px solid #e5e5e5;
+  }
+
+  .share-btn-copy:hover {
+    background: #f9f9f9;
+    border-color: #d4d4d4;
+  }
+}

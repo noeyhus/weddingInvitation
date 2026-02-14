@@ -1,6 +1,6 @@
-# 디지털 청첩장 💒
+# weddingInvitation 💒
 
-React + Vite + TailwindCSS로 만든 반응형 디지털 청첩장 웹사이트입니다.
+모바일 청첩장 (React + Vite + TailwindCSS)
 
 ## 🎯 주요 기능
 
